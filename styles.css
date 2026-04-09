@@ -1,0 +1,654 @@
+/* ========================================
+   Reset & Base
+   ======================================== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+  color: #111;
+  background: #fff;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* ========================================
+   Header
+   ======================================== */
+.site-header {
+  border-bottom: 1px solid #e0e0e0;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.main-nav {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #555;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #000;
+}
+
+.nav-admin {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0.25rem 0.7rem;
+  font-size: 0.82rem;
+}
+
+.nav-admin:hover {
+  border-color: #111;
+}
+
+/* ========================================
+   Hero
+   ======================================== */
+.hero {
+  padding: 4rem 0 3rem;
+  text-align: center;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.hero h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1.05rem;
+  color: #555;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* ========================================
+   Page content
+   ======================================== */
+.page-content {
+  padding: 2.5rem 0 4rem;
+}
+
+.page-content h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.page-content h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.page-content p {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
+}
+
+/* ========================================
+   Posts listing
+   ======================================== */
+.posts-section {
+  padding: 2.5rem 0 4rem;
+}
+
+.post-card {
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.post-card:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.post-card:hover {
+  opacity: 0.7;
+}
+
+.post-card .post-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.post-card .post-meta {
+  font-size: 0.82rem;
+  color: #888;
+  margin-bottom: 0.5rem;
+}
+
+.post-card .post-excerpt {
+  font-size: 0.92rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+.post-card .post-footer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.75rem;
+  font-size: 0.82rem;
+  color: #888;
+}
+
+.post-card .post-footer > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.read-more {
+  font-weight: 600;
+  color: #111;
+}
+
+/* ========================================
+   Post detail
+   ======================================== */
+.post-detail {
+  padding: 2.5rem 0 4rem;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  font-size: 0.88rem;
+  color: #555;
+  font-weight: 500;
+}
+
+.back-link:hover {
+  color: #111;
+}
+
+.post-detail .post-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.post-detail .post-meta {
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 1.5rem;
+}
+
+.post-detail .post-body {
+  font-size: 0.98rem;
+  color: #222;
+  line-height: 1.8;
+  white-space: pre-wrap;
+}
+
+/* ========================================
+   Like Button
+   ======================================== */
+.post-actions {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.like-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: none;
+  border: 1.5px solid #ccc;
+  border-radius: 20px;
+  padding: 0.35rem 0.85rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: #555;
+  transition: all 0.2s;
+}
+
+.like-btn:hover {
+  border-color: #111;
+  color: #111;
+}
+
+.like-btn.liked {
+  border-color: #111;
+  color: #111;
+}
+
+.like-btn.liked .heart-icon {
+  fill: #111;
+}
+
+.heart-icon {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  transition: fill 0.2s;
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+.like-count {
+  font-weight: 600;
+  line-height: 1;
+}
+
+/* ========================================
+   Comments
+   ======================================== */
+.comments-section {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.comments-section h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.comments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.comment {
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+}
+
+.comment-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.3rem;
+}
+
+.comment-author {
+  font-weight: 600;
+  font-size: 0.88rem;
+}
+
+.comment-time {
+  font-size: 0.75rem;
+  color: #999;
+}
+
+.comment-body {
+  font-size: 0.9rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+.comment-delete {
+  background: none;
+  border: none;
+  font-size: 0.75rem;
+  color: #999;
+  cursor: pointer;
+  margin-top: 0.4rem;
+  padding: 0;
+}
+
+.comment-delete:hover {
+  color: #111;
+  text-decoration: underline;
+}
+
+.no-comments {
+  font-size: 0.88rem;
+  color: #999;
+  margin-bottom: 1rem;
+}
+
+/* ========================================
+   Comment Form
+   ======================================== */
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.comment-form input,
+.comment-form textarea {
+  font-family: inherit;
+  font-size: 0.88rem;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.2s;
+  background: #fff;
+  color: #111;
+}
+
+.comment-form input:focus,
+.comment-form textarea:focus {
+  border-color: #111;
+}
+
+.comment-form textarea {
+  min-height: 70px;
+  resize: vertical;
+}
+
+.btn-submit {
+  align-self: flex-start;
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-submit:hover {
+  background: #333;
+}
+
+.form-error {
+  font-size: 0.8rem;
+  color: #c00;
+  min-height: 1.2em;
+}
+
+/* ========================================
+   Admin
+   ======================================== */
+.admin-section {
+  padding: 2.5rem 0 4rem;
+}
+
+.admin-section h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.admin-login {
+  max-width: 360px;
+}
+
+.admin-login h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.admin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.admin-form input,
+.admin-form textarea,
+.admin-form select {
+  font-family: inherit;
+  font-size: 0.88rem;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.2s;
+  background: #fff;
+  color: #111;
+}
+
+.admin-form input:focus,
+.admin-form textarea:focus {
+  border-color: #111;
+}
+
+.admin-form textarea {
+  min-height: 160px;
+  resize: vertical;
+}
+
+.admin-form label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.admin-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.admin-bar .btn-submit {
+  flex-shrink: 0;
+}
+
+.btn-danger {
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.8rem;
+  color: #555;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-danger:hover {
+  border-color: #c00;
+  color: #c00;
+}
+
+.btn-secondary {
+  background: #fff;
+  border: 1px solid #111;
+  color: #111;
+  border-radius: 4px;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+  background: #111;
+  color: #fff;
+}
+
+.admin-post-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.admin-post-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  background: #fafafa;
+}
+
+.admin-post-item .post-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.admin-post-item .post-info strong {
+  display: block;
+  font-size: 0.92rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.admin-post-item .post-info span {
+  font-size: 0.78rem;
+  color: #999;
+}
+
+.admin-post-item .post-actions-admin {
+  display: flex;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.admin-msg {
+  font-size: 0.85rem;
+  color: #555;
+  padding: 1rem 0;
+}
+
+/* ========================================
+   Delete Prompt Modal
+   ======================================== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+}
+
+.modal {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  width: 320px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+}
+
+.modal h4 {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+}
+
+.modal input {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.88rem;
+  margin-bottom: 0.5rem;
+  outline: none;
+  font-family: inherit;
+}
+
+.modal input:focus {
+  border-color: #111;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}
+
+.modal-actions button {
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.modal-cancel {
+  background: #eee;
+  border: none;
+  color: #333;
+}
+
+.modal-confirm {
+  background: #111;
+  border: none;
+  color: #fff;
+}
+
+.modal-error {
+  font-size: 0.78rem;
+  color: #c00;
+  min-height: 1em;
+  margin-bottom: 0.25rem;
+}
+
+/* ========================================
+   Footer
+   ======================================== */
+.site-footer {
+  border-top: 1px solid #e0e0e0;
+  padding: 1.5rem 0;
+  text-align: center;
+  font-size: 0.82rem;
+  color: #999;
+}

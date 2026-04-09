@@ -1,0 +1,31 @@
+{
+  "name": "tech-website",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "start": "npx serve ."
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0"
+  },
+  "description": "Tech website with insights and an overview of software in general",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yjclarelee/tech_blog.git"
+  },
+  "keywords": [
+    "embedded",
+    "software",
+    "software",
+    "basics"
+  ],
+  "author": "Yoojeong Lee with Claude",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yjclarelee/tech_blog/issues"
+  },
+  "homepage": "https://github.com/yjclarelee/tech_blog#readme"
+}
